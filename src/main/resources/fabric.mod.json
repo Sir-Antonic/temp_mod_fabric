@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "crops",
+	"version": "${version}",
+	"name": "crops",
+	"description": "Crops",
+	"authors": [
+		"SirAntonic"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/temp_mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.antonic.temp_mod.Main"
+		],
+		"client": [
+          "com.antonic.temp_mod.Client"
+		],
+		"fabric-datagen": [
+			"com.antonic.temp_mod.DataGen"
+		]
+	},
+	"mixins": [
+		"temp_mod.mixins.json",
+		{
+			"config": "temp_mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
